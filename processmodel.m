@@ -13,7 +13,7 @@ function processmodel(pm)
     includeModelTestingMetricTask = true;
     includeModelStandardsTask = true;
     includeDesignErrorDetectionTask = false;
-    includeFindClones = true;
+    includeFindClones = false;
     includeModelComparisonTask = false;
     includeSDDTask = true;
     includeSimulinkWebViewTask = true;
@@ -38,10 +38,21 @@ function processmodel(pm)
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     %% Define Shared Queries
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    findModels = padv.builtin.query.FindModels(Name="ModelsQuery");
-    findSlModels = padv.builtin.query.FindArtifacts(ArtifactType="sl_model_file");
-    findModelsWithTests = padv.builtin.query.FindModelsWithTestCases(Parent=findModels);
-    findTestsForModel = padv.builtin.query.FindTestCasesForModel(Parent=findModels);
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Define Shared Queries
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Restrict model search to P4_Design folder
+findModels = padv.builtin.query.FindModels(Name="ModelsQuery", ...
+    IncludePath=fullfile( 'P4_Design'));
+
+% Restrict Simulink model artifacts to P4_Design folder
+findSlModels = padv.builtin.query.FindArtifacts(ArtifactType="sl_model_file", ...
+    IncludePath=fullfile( 'P4_Design'));
+
+% Test-related queries
+findModelsWithTests = padv.builtin.query.FindModelsWithTestCases(Parent=findModels);
+findTestsForModel = padv.builtin.query.FindTestCasesForModel(Parent=findModels);
 
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     %% Register Tasks
