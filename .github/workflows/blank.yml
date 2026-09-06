@@ -2,9 +2,9 @@ name: MATLAB CI
 
 on:
   push:
-    branches: [main, Dev, Export_to_2024b]
+    branches: [main, Dev, Motor_Control]
   pull_request:
-    branches: [main, Dev, Export_to_2024b]
+    branches: [main, Dev, Motor_Control]
 
 permissions:
   contents: read
