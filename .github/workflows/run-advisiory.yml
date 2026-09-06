@@ -14,11 +14,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # Step 1: Checkout repository
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      # Step 2: Set up MATLAB with toolboxes
+      # Use the latest supported version of MATLAB Actions
       - name: Set up MATLAB with toolboxes
-        uses: matlab-actions/setup-matlab@v1
+        uses: matlab-actions/setup-matlab@v2
         with:
           products: |
             Simulink
@@ -26,21 +29,24 @@ jobs:
             Simulink Test
             Embedded Coder
 
+      # Step 3: Verify MATLAB installation
       - name: Verify MATLAB installation
-        uses: matlab-actions/run-command@v1
+        uses: matlab-actions/run-command@v2
         with:
           command: |
             disp('MATLAB CI pipeline is working!');
 
+      # Step 4: Load MATLAB project
       - name: Load MATLAB project
-        uses: matlab-actions/run-command@v1
+        uses: matlab-actions/run-command@v2
         with:
           command: |
             proj = matlab.project.loadProject(fullfile(pwd,'Matlab.prj'));
             disp(['Loaded project: ', proj.Name]);
 
+      # Step 5: Run Process Advisor checks (if available)
       - name: Run Process Advisor checks (if available)
-        uses: matlab-actions/run-command@v1
+        uses: matlab-actions/run-command@v2
         with:
           command: |
             proj = matlab.project.loadProject(fullfile(pwd,'Matlab.prj'));
@@ -50,17 +56,14 @@ jobs:
                 results = pm.runAll();
                 disp('Process Advisor checks completed.');
                 disp(results);
-                % Ensure results folder exists in runner workspace
                 resultsDir = fullfile(pwd,'PA_Results');
                 if ~exist(resultsDir,'dir')
                     mkdir(resultsDir);
                 end
                 disp(['Saving results to: ', resultsDir]);
-                dir(resultsDir); % Debug: show folder contents
                 save(fullfile(resultsDir,'ci_results.mat'),'results');
             else
                 warning('Process Advisor not available in this environment. Skipping checks.');
-                % Create dummy file so artifact step always has something
                 resultsDir = fullfile(pwd,'PA_Results');
                 if ~exist(resultsDir,'dir')
                     mkdir(resultsDir);
@@ -70,6 +73,7 @@ jobs:
                 fclose(fid);
             end
 
+      # Step 6: Upload Process Advisor results
       - name: Upload Process Advisor results
         if: always()
         uses: actions/upload-artifact@v4
