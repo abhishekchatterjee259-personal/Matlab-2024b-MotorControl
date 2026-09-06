@@ -29,6 +29,7 @@ jobs:
             Simulink Check
             Simulink Test
             Embedded Coder
+      
 
       # Step 3: Verify MATLAB installation
       - name: Verify MATLAB installation
