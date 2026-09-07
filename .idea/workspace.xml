@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2f70a843-9a86-4c11-83cb-481fc9c8effc" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/P0_Document/Motor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/P0_Document/cpri-approved-electrical-control-panels-1000x1000.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/P0_Document/depositphotos_72535859-stock-photo-blue-industrial-electric-motor.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/P3_Plant/PlantModel/SinglePhaseACMotor.slx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/P4_Design/Models/Controls/Control_Of_SinglePhaseACMotor.slx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/project/XMFydaspIHDChlMN_aAQNOwH1Ao/sjwvyIVV754e_oHs7Hv8_DfkfHwd.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/project/XMFydaspIHDChlMN_aAQNOwH1Ao/sjwvyIVV754e_oHs7Hv8_DfkfHwp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/project/_2cPWW-ozQsJD-RnCTNqFQ23RUM/1SJr9XUkyvoMXMh8Q1qTY0vKZeYd.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/project/_2cPWW-ozQsJD-RnCTNqFQ23RUM/1SJr9XUkyvoMXMh8Q1qTY0vKZeYp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/project/_2cPWW-ozQsJD-RnCTNqFQ23RUM/cghDXrYHpOl41Onzqs1VXq1Yb_Qd.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/project/_2cPWW-ozQsJD-RnCTNqFQ23RUM/cghDXrYHpOl41Onzqs1VXq1Yb_Qp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/project/_2cPWW-ozQsJD-RnCTNqFQ23RUM/xS7SGBwt8RHEOFQqgyzWsAyBR40d.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/project/_2cPWW-ozQsJD-RnCTNqFQ23RUM/xS7SGBwt8RHEOFQqgyzWsAyBR40p.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/project/mS93SqmMOeBW2xPgP4aDqK-gQko/TON71rKrkyjYquMYTBscwlT460Ud.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/project/mS93SqmMOeBW2xPgP4aDqK-gQko/TON71rKrkyjYquMYTBscwlT460Up.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 6
+}]]></component>
+  <component name="ProjectId" id="3J0OE9mCDI4yD8lHKYOi4WqWC6L" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "git-widget-placeholder": "Motor__Control"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-2653e85de345-6d6dccd035ac-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-253.31033.139" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2f70a843-9a86-4c11-83cb-481fc9c8effc" name="Changes" comment="" />
+      <created>1788794409764</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1788794409764</updated>
+    </task>
+    <servers />
+  </component>
+</project>
