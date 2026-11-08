@@ -2,9 +2,9 @@ name: Simple MATLAB CI
 
 on:
   push:
-    branches: [main, Dev, Motor_Control]
+    branches: [main, Dev, yamlMODIFICATION]
   pull_request:
-    branches: [main, Dev, Motor_Control]
+    branches: [main, Dev, yamlMODIFICATION]
 
 jobs:
   build:
@@ -24,4 +24,13 @@ jobs:
         uses: matlab-actions/run-command@v2
         with:
           command: |
-            disp('MATLAB CI basic test successful.');
+            disp('MATLAB CI basic test successful.')
+            version
+            ver
+      - name: Load Project
+        uses: matlab-actions/run-command@v2
+        with:
+          command: |
+            proj=matlab.project.loadProject(fullfile(pwd,'MotorControl.prj'));
+            proj=currentProject
+            disp(['LoadedProject-->',proj.Name]);
